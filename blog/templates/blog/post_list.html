@@ -10,15 +10,9 @@
 
     {% for post in posts %}
     <article>
-        <time>published: 14.06.2014, 12:14</time>
-        <h2><a href="">My first post</a></h2>
-        <p>This post talks all about Formula 1.</p>
-    </article>
-
-    <article>
-        <time>published: 14.06.2014, 12:14</time>
-        <h2><a href="">My second post</a></h2>
-        <p>This post talks about the British F1 racing team, Williams Racing.</p>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </article>
     {% endfor %}
     
